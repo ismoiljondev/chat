@@ -1,0 +1,44 @@
+.container {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 15px 55px;
+    border-radius: 10px;
+    &__title {
+      font-size: 35px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid grey;
+        padding: 15px;
+        width: 250px;
+        &::placeholder {
+          color: grey;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        padding: 15px;
+        border: none;
+        color: white;
+        font-size: 20px;
+        background-color: black;
+      }
+    }
+  }
+}

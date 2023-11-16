@@ -1,0 +1,25 @@
+.container {
+  border-left: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 80px;
+    align-items: center;
+    background-color: #0088cc;
+    color: #fff;
+    &__icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      p {
+        font-weight: 900;
+        font-size: 40px;
+      }
+    }
+  }
+}

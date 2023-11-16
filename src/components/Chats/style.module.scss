@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  &__user {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 15px;
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+    img {
+      width: 50px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+    &:hover {
+      background-color: #c7c7c7;
+    }
+  }
+}

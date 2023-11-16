@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0088cc;
+  height: 80px;
+  padding: 0 15px;
+  color: #fff;
+  &__user {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    button {
+      padding: 5px;
+    }
+  }
+}
