@@ -1,5 +1,5 @@
 .container {
-  background-color: red;
+  background-color: #0088cc;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,6 +36,7 @@
         display: flex;
         align-items: center;
         font-size: 12px;
+        cursor: pointer;
       }
       button {
         padding: 15px;
@@ -43,6 +44,7 @@
         color: white;
         font-size: 20px;
         background-color: black;
+        cursor: pointer;
       }
     }
   }
