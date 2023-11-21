@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home";
-import Register from "./pages/Register";
-import Login from "./pages/Login";
+import Home from "./pages/Home/Home";
+import Register from "./pages/Register/Register";
+import Login from "./pages/Login/Login";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 
@@ -13,6 +13,7 @@ function App() {
     if (!currentUser) {
       return <Navigate to={"/login"} />;
     }
+    return children;
   };
   return (
     <div className="App">

@@ -10,6 +10,16 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    &__img {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      img {
+        width: 40px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+      }
+    }
     button {
       border: none;
       background-color: white;

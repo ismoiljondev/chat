@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./style.module.scss";
-import Sidebar from "../../components/Sidebar";
-import Chat from "../../components/Chat";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import Chat from "../../components/Chat/Chat";
 const Home = () => {
   return (
     <div className={style.home}>
