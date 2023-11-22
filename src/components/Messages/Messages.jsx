@@ -9,17 +9,17 @@ const Messages = ({ message }) => {
   const ref = useRef();
 
   useEffect(() => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+    ref?.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
-  
+
   return (
     <div className={`${style.container} ${style.left}`} ref={ref}>
       <div className={style.container__info}>
         <img
           src={
-            message.sendId === currentUser.uid
-              ? currentUser.photoURL
-              : data.user.photoURL
+            message?.sendId === currentUser?.uid
+              ? currentUser?.photoURL
+              : data?.user?.photoURL
           }
           alt="user"
           width={"40px"}
@@ -29,10 +29,10 @@ const Messages = ({ message }) => {
         <span>just now</span>
       </div>
       <div className={style.container__content}>
-        <p>{message.text}</p>
-        {message.img && (
+        <p>{message?.text}</p>
+        {message?.img && (
           <div>
-            <img src={message.img} alt="" />
+            <img src={message?.img} alt="" />
           </div>
         )}
       </div>

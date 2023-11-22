@@ -15,7 +15,7 @@ import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { db, storage } from "../../firebase";
 const Input = () => {
   const [text, setText] = useState("");
-  const { img, setImg } = useState(null);
+  const [img, setImg] = useState(null);
 
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
@@ -23,11 +23,12 @@ const Input = () => {
   const handleSend = async () => {
     if (img) {
       const storageRef = ref(storage, uuid());
+
       const uploadTask = uploadBytesResumable(storageRef, img);
 
       uploadTask.on(
         (error) => {
-          // setErr(true)
+          //TODO:Handle Error
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
@@ -71,7 +72,6 @@ const Input = () => {
     setText("");
     setImg(null);
   };
-
   return (
     <div className={style.container}>
       <input

@@ -5,7 +5,6 @@ import Input from "../Input/Input";
 import { ChatContext } from "../../context/ChatsContext";
 const Chat = () => {
   const { data } = useContext(ChatContext);
-  console.log(data);
   return (
     <div className={style.container}>
       <div className={style.container__nav}>
