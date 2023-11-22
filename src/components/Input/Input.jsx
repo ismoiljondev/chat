@@ -32,7 +32,7 @@ const Input = () => {
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
-            await updateDoc(doc(db, "chats", data.chatId), {
+            await updateDoc(doc(db, "chats", data?.chatId), {
               messages: arrayUnion({
                 id: uuid(),
                 text,
@@ -56,17 +56,17 @@ const Input = () => {
     }
 
     await updateDoc(doc(db, "userChats", currentUser.uid), {
-      [data.chatId + ".lastMessage"]: {
+      [data?.chatId + ".lastMessage"]: {
         text,
       },
-      [data.chatId + ".date"]: serverTimestamp(),
+      [data?.chatId + ".date"]: serverTimestamp(),
     });
 
-    await updateDoc(doc(db, "userChats", data.user.uid), {
-      [data.chatId + ".lastMessage"]: {
+    await updateDoc(doc(db, "userChats", data?.user?.uid), {
+      [data?.chatId + ".lastMessage"]: {
         text,
       },
-      [data.chatId + ".date"]: serverTimestamp(),
+      [data?.chatId + ".date"]: serverTimestamp(),
     });
 
     setText("");
