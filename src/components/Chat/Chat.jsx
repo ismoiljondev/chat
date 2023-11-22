@@ -10,8 +10,6 @@ const Chat = () => {
       <div className={style.container__nav}>
         <h2>{data.user?.displayName}</h2>
         <div className={style.container__nav__icons}>
-          <p>&#9990;</p>
-          <p>&#9786;</p>
           <p>&#9776;</p>
         </div>
       </div>
