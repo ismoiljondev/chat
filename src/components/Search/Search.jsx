@@ -72,6 +72,7 @@ const Search = () => {
     setUser(null);
     setUsername("");
   };
+  console.log(user);
   return (
     <div className={style.container}>
       <div className={style.container__form}>
